@@ -2,8 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>title</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Trucs et bidules</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <nav class="main">
@@ -13,12 +16,15 @@
                     <small>Un beau bordel</small>
                 </h1>
             </header>
-            <ul>
+            <ul id="menu">
                 <li>
                     <a href="#">Menu01</a>
                 </li>
                 <li>
-                    <a href="#">Menu02</a>
+                    <a href="#">Menu02
+                        <i class="fa fa-caret-right collapsed" aria-hidden="true"></i>
+                        <i class="fa fa-caret-down expanded" aria-hidden="true"></i>
+                    </a>
                     <ul>
                         <li>
                             <a href="#">Sub-menu01</a>
@@ -43,12 +49,29 @@
             </ul>
         </nav>
         <nav class="sub">
-            menu here
+            <img src="./assets/flower.svg">
         </nav>
         <div class="container">
 
             <article>
-                <h1>Article Title</h2>
+                <header>
+                    <h1>Article Title</h2>
+                    <ul class="list-inline">
+                        <li>
+                            <i class="fa fa-calendar"></i>
+                            <time class="post-date" datetime="2017-02-26">26 February 2017</time>
+                        </li>
+                        <li>
+                            <a class="author-image" href="/author/landru/" style="background-image: url(./content/images/landru.png)">
+                            </a>
+
+                            <a href="/author/landru/">Cyrille Meichel</a>
+
+                        </li>
+
+                        <li><i class="fa fa-folder-open"></i> <a href="/tag/arduino/">Arduino</a>, <a href="/tag/atmel/">Atmel</a>, <a href="/tag/microcontrollers/">Microcontrollers</a></li>
+                        </ul>
+                    </header>
                 <p>Article content</p>
             </article>
 

@@ -70,7 +70,6 @@
 @import "./bootstrap/less/code.less";
 @import "./bootstrap/less/list-group.less";
 
-
 /* Small devices (tablets, 768px and up) */
 //@media (min-width: @screen-sm-min) { ... }
 
@@ -84,14 +83,14 @@
 
 @font-face {
   font-family: "Afta Sans";
-  src: url("./fonts/AftaSansThin-Regular.otf");
+  src: url("../fonts/AftaSansThin-Regular.otf");
 }
 
 body {
     margin:0;
     position: relative;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-image: url("./assets/background.jpg")
+    background-image: url("../assets/background.jpg")
 }
 
 h1 {
@@ -104,6 +103,7 @@ h1 {
 
         span {
             display: block;
+            font-size: 1.3em;
         }
 
         small {
@@ -113,7 +113,7 @@ h1 {
 }
 
 nav {
-    background-color: rgba(255, 255, 255, 0.2);
+    //background-color: rgba(255, 255, 255, 0.4);
 }
 
 nav.main {
@@ -150,6 +150,28 @@ nav.main {
                         border-bottom: solid 2px;
                     }
                 }
+                &>ul {
+                    display: none;
+                }
+
+                .collapsed {
+                        display: inherit;
+                    }
+                    .expanded {
+                        display: none;
+                    }
+
+                &.expand {
+                    &>ul {
+                        display: block;
+                    }
+                    .collapsed {
+                        display: none;
+                    }
+                    .expanded {
+                        display: inherit;
+                    }
+                }
             }
         }
     }
@@ -163,11 +185,33 @@ header.main {
 
 nav.sub {
     margin-left: @headerWidth;
-    padding: 5px 20px 5px 20px;
-    height: 50px;
+    padding: 30px 20px 5px 20px;
+    height: 150px;
+
 }
 
 div.container {
     margin-left: @headerWidth;
     padding: 20px;
 }
+
+
+.author-image {
+  background-position: center center;
+  background-size: cover;
+  border-radius: 4px;
+  display: inline-block;
+  height: 18px;
+  vertical-align: top;
+  width: 18px; }
+
+  article {
+      header {
+          ul {
+              color: @gray-light;
+              a {
+                  color: @gray-light;
+              }
+          }
+      }
+  }
