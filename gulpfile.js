@@ -18,7 +18,7 @@ gulp.task('open', function(){
 gulp.task('less', function() {
   gulp.src('./less/*.less')
     .pipe(less())
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('assets/css'))
     .pipe(livereload());
 });
  
